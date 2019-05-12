@@ -6,7 +6,7 @@ namespace Aigletter\SmsSender\Drivers;
 use Aigletter\SmsSender\Contract\ContractSmsDriver;
 use mysql_xdevapi\Exception;
 
-class SmsRuDriver extends AbstractDriver implements ContractSmsDriver
+class SmsRuDriver extends AbstractDriver
 {
     protected $domain = 'https://sms.ru';
     

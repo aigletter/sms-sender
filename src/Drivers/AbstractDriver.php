@@ -48,11 +48,15 @@ abstract class AbstractDriver implements ContractSmsDriver
      * @return $this|ContractSmsDriver
      */
     public function to($to) {
-        if (!is_string($to)) {
+        if (is_string($to)) {
             $to = explode(',', $to);
         }
-        $this->to[] = $to;
+        $this->to = $to;
 
         return $this;
     }
+
+    public function beforeSend() {}
+
+    public function afterSend() {}
 }
